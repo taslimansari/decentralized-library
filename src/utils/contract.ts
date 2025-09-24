@@ -503,6 +503,6 @@ export const CONTRACT_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3"; //
 export const getContract = (provider: ethers.BrowserProvider, signer?: ethers.JsonRpcSigner) => {
   if (signer) {
     return new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer);
-  }
+  rpcUrl: 'http://127.0.0.1:7545',
   return new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, provider);
 };
