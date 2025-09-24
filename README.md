@@ -38,42 +38,37 @@ A fully functional decentralized application (DApp) for managing a library syste
 
 ## 🏗 Setup Instructions
 
-### Step 1: Deploy Smart Contract
+### Quick Start (Fully Automated)
 
-1. Open [Remix IDE](https://remix.ethereum.org)
-2. Create a new file called `Library.sol`
-3. Copy the contract code from `contracts/Library.sol`
-4. Compile with Solidity version 0.8.19+
-5. Deploy to your chosen test network:
-   - **Sepolia Testnet** (recommended)
-   - **Goerli Testnet**  
-   - **Ganache Local Network**
-
-### Step 2: Configure Application
-
-1. After deployment, copy the contract address
-2. Open `src/utils/contract.ts`
-3. Replace the placeholder with your contract address:
-   ```typescript
-   export const CONTRACT_ADDRESS = "YOUR_DEPLOYED_CONTRACT_ADDRESS";
-   ```
-
-### Step 3: Install and Run
+Everything is pre-configured! Just run these commands:
 
 ```bash
-# Install dependencies
-npm install
+# Terminal 1 - Start local blockchain
+npm run blockchain
 
-# Start development server
-npm run dev
+# Terminal 2 - Deploy contracts and start app
+npm run setup
 ```
 
-### Step 4: Connect Wallet
+### What's Included
 
-1. Open the application in your browser
-2. Click "Connect Wallet" 
-3. Approve the MetaMask connection
-4. Ensure you're on the correct test network
+- ✅ **Hardhat Local Blockchain**: Pre-configured with 10 accounts
+- ✅ **Smart Contract**: Auto-compiled and deployed
+- ✅ **Sample Data**: 8 books pre-loaded in the library
+- ✅ **Test Accounts**: Each account has 10,000 ETH
+- ✅ **MetaMask Ready**: Just add the localhost network
+
+### MetaMask Configuration
+
+Add this network to MetaMask:
+- **Network Name**: Localhost 8545
+- **RPC URL**: http://127.0.0.1:8545
+- **Chain ID**: 1337
+- **Currency Symbol**: ETH
+
+Import the admin account:
+- **Private Key**: `0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80`
+- **Address**: `0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266`
 
 ## 🎯 How to Use
 

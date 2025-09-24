@@ -49,8 +49,8 @@ const WalletPrompt: React.FC<WalletPromptProps> = ({ connect, isConnecting, erro
 
         <div className="mt-6 text-xs text-gray-500">
           <p>
-            Make sure you have MetaMask installed and are connected to a test network
-            (Sepolia, Goerli, or localhost)
+            Make sure you have MetaMask installed and connected to localhost:8545 (Chain ID: 1337).
+            Import the test account with private key: 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
           </p>
         </div>
       </div>
