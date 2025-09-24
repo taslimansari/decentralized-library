@@ -42,16 +42,6 @@ function App() {
     refreshData,
   } = useLibraryContract(provider, signer);
 
-  // Check if contract is configured
-  if (!CONTRACT_ADDRESS || CONTRACT_ADDRESS === "0x...") {
-    return <ContractSetup />;
-  }
-
-  // Show wallet prompt if not connected
-  if (!isConnected) {
-    return <WalletPrompt connect={connect} isConnecting={isConnecting} error={web3Error} />;
-  }
-
   const handleAddBook = useCallback(async (title: string, author: string) => {
     setTransactionLoading(true);
     try {
@@ -78,6 +68,16 @@ function App() {
       setTransactionLoading(false);
     }
   }, [returnBook]);
+
+  // Check if contract is configured
+  if (!CONTRACT_ADDRESS || CONTRACT_ADDRESS === "0x...") {
+    return <ContractSetup />;
+  }
+
+  // Show wallet prompt if not connected
+  if (!isConnected) {
+    return <WalletPrompt connect={connect} isConnecting={isConnecting} error={web3Error} />;
+  }
 
   const getFilteredBooks = () => {
     switch (activeTab) {
