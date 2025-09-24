@@ -498,12 +498,11 @@ export const CONTRACT_ABI = [
 ];
 
 // You need to replace this with your deployed contract address
-export const CONTRACT_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3"; // Hardhat default deployment address
+export const CONTRACT_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3"; // Default deployment address
 
 export const getContract = (provider: ethers.BrowserProvider, signer?: ethers.JsonRpcSigner) => {
   if (signer) {
     return new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer);
   }
-  rpcUrl: 'http://127.0.0.1:7545',
   return new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, provider);
 };

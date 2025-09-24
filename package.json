@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "blockchain": "hardhat node",
+    "blockchain": "ganache --port 8545 --chainId 1337 --accounts 10 --defaultBalanceEther 10000 --host 127.0.0.1",
     "deploy": "hardhat run scripts/deploy.js --network localhost",
     "setup": "npm run deploy && npm run dev",
     "build": "vite build",
@@ -32,7 +32,6 @@
     "eslint": "^9.9.1",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.11",
-    "ganache": "^7.9.2",
     "globals": "^15.9.0",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
